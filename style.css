@@ -1,0 +1,15 @@
+#active-nav {
+    background-color: lightgray;
+    color: black;
+    
+}
+
+#filters{
+    color:white;
+    background-color: black;
+}
+
+.nav-link {
+    color: black;
+    font-weight: bold;
+}
