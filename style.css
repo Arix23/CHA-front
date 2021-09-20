@@ -17,8 +17,30 @@
     width: 100%;
 }
 
+
+
+#dashboard-row{
+    margin-top: 2%;
+    margin-bottom:2%;
+}
+
+#medium-prob{
+    background-color: lightyellow;
+}
+
+#high-prob{
+    background-color:lightcoral;
+}
+
 #oracle-nav-text{
     color:white;
+}
+
+#dashboard-gray{
+    background-color: lightgrey;
+    margin-left: 1%;
+    margin-right: 1%;
+
 }
 
 #reset-button {
