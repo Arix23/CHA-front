@@ -20,31 +20,62 @@
                 <div class="col">
                     <ul class="nav flex-column nav-pills nav-fill">
                         <li class="nav-item">
-                          <a class="nav-link active" id="active-nav" href="#"><img src="static/dashboard.png" width="25"> Dashboard</a>
+                          <a class="nav-link active" id="active-nav" href="#"><img class="nav-img" src="static/dashboard.png" width="25"> Dashboard</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#"><img src="static/details.png" width="25">Details</a>
+                          <a class="nav-link" href="#"><img class="nav-img" src="static/details.png" width="25">Details</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#"><img src="static/problem-count.png" width="25">Concurrent problem count</a>
+                          <a class="nav-link" href="#"><img class="nav-img" src="static/problem-count.png" width="25">Concurrent problem count</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#"><img src="static/time.png" width="25">Problem frequency</a>
+                          <a class="nav-link" href="#"><img class="nav-img" src="static/time.png" width="25">Problem frequency</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><img src="static/problem.png" width="25">Problem details</a>
+                            <a class="nav-link" href="#"><img class="nav-img" src="static/problem.png" width="25">Problem details</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#"><img src="static/target.png" width="25">Target details</a>
+                            <a class="nav-link" href="#"><img class="nav-img" src="static/target.png" width="25">Target details</a>
                           </li>
-                          <li class="nav-item">
-                            <a class="nav-link" id="filters" href="#"><img src="static/filter.png" width="25">Filters</a>
+                          <li class="nav-item" id="nav-bar-filter">
+                            <a class="nav-link" id="filters" href="#"><img class="nav-img" src="static/filter.png" width="25">Filters</a>
                           </li>
                       </ul>
                 </div>
                 <div class="col-10">
-                    <div class="row">
-                        aaa
+                    <div class="row" id="page-filters">
+                        <div class="col">
+                            <button type="button" class="btn btn-primary btn-block btn-lg" id="reset-button"><img src="static/reset.png" width="25px"> Reset</button>
+                            
+                        </div>
+                        <div class="col">
+                            From: <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+                                <input placeholder="Select date" type="text" id="example" class="form-control">
+                                <i class="fas fa-calendar input-prefix" tabindex=0></i>
+                              </div>
+                        </div>
+                        <div class="col">
+                            To: <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+                                <input placeholder="Select date" type="text" id="example" class="form-control">
+                                <i class="fas fa-calendar input-prefix" tabindex=0></i>
+                              </div>
+                        </div>
+                        <div class="col">
+                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>Filter by problem...</option>
+                                <option value="1">Error 1</option>
+                                <option value="2">Error 2</option>
+                                <option value="3">Error 3</option>
+                              </select>
+                        </div>
+                        <div class="col">
+                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>Filter by target...</option>
+                                <option value="1">Target 1</option>
+                                <option value="2">Target 2</option>
+                                <option value="3">Target 3</option>
+                              </select>
+                        </div>
                     </div>
                     <div class ="row">
                         <div class="col">
