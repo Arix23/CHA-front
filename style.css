@@ -17,11 +17,19 @@
     width: 100%;
 }
 
-
+#form-json{
+    margin-top: 2%;
+    margin-bottom:2%;
+    width: 80%;
+}
 
 #dashboard-row{
     margin-top: 2%;
     margin-bottom:2%;
+}
+
+#new-analysis {
+    background-color: lightgray;
 }
 
 #medium-prob{
