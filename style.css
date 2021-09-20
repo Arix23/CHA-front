@@ -11,6 +11,15 @@
 #example{
     width: 90%;
 }
+#oracle-nav{
+    background-color: dimgrey;
+    color: white;
+    width: 100%;
+}
+
+#oracle-nav-text{
+    color:white;
+}
 
 #reset-button {
     background-color: transparent;
