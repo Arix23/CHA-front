@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> CHA Finding Explorer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-light" id="oracle-nav">
+        <a class="navbar-brand" id="oracle-nav-text" href="#">
+            <img src="static/oracle.png" width="90" height="40" class="d-inline-block align-top" alt="">
+            CHA Finding Explorer | Settings
+        </a>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <ul class="nav flex-column nav-pills nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img class="nav-img" src="static/dashboard.png" width="25">
+                            Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img class="nav-img" src="static/details.png"
+                                width="25">Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img class="nav-img" src="static/problem-count.png"
+                                width="25">Concurrent problem count</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img class="nav-img" src="static/time.png" width="25">Problem
+                            frequency</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img class="nav-img" src="static/problem.png" width="25">Problem
+                            details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img class="nav-img" src="static/target.png" width="25">Target
+                            details</a>
+                    </li>
+                    <li class="nav-item" id="nav-bar-filter">
+                        <a class="nav-link active" id="active-nav" id="filters" href="#"><img class="nav-img"
+                                src="static/filter.png" width="25">Filters</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-10">
+                <div class="row" id="page-filters">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary btn-block btn-lg" id="reset-button"><img
+                                src="static/reset.png" width="25px"> Reset</button>
+
+                    </div>
+                    <div class="col">
+                        From: <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+                            <input placeholder="Select date" type="text" id="example" class="form-control">
+                            <i class="fas fa-calendar input-prefix" tabindex=0></i>
+                        </div>
+                    </div>
+                    <div class="col">
+                        To: <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
+                            <input placeholder="Select date" type="text" id="example" class="form-control">
+                            <i class="fas fa-calendar input-prefix" tabindex=0></i>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                            <option selected>Filter by problem...</option>
+                            <option value="1">Error 1</option>
+                            <option value="2">Error 2</option>
+                            <option value="3">Error 3</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                            <option selected>Filter by target...</option>
+                            <option value="1">Target 1</option>
+                            <option value="2">Target 2</option>
+                            <option value="3">Target 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row text-center" id="dashboard-row">
+                    <div class="col">
+                        <h2> From </h2>
+                    </div>
+                    <div class="col">
+                        <h2> Time period</h2>
+                    </div>
+                    <div class="col">
+                        <h2> To</h2>
+                    </div>
+                </div>
+                <div class="row text-center" id="dashboard-row">
+                    <div class="col">
+                        <h2> <input id="date" type="date"> </h2>
+                    </div>
+                    <div class="col" id="dashboard">
+                        <img src="static/period.png" width="400">
+                    </div>
+                    <div class="col" id="dashboard-row">
+                        <h2> <input id="date" type="date"> </h2>
+                    </div>
+                </div>
+                <br>
+                <div class="row text-center" id="dashboard-row">
+                    <div class="col">
+                        <h2> Filter by problem</h2>
+                        <div class="form-group has-search">
+                            <span class="fa fa-search form-control-feedback"></span>
+                            <input type="text" class="form-control" placeholder="Search problem...">
+                            <br>
+                            <div style="text-align:left">
+                                <input type="radio" id="html" name="fav_language" value="HTML">
+                                <label for="html">Selected</label><br>
+                                <input type="radio" id="html" name="fav_language" value="HTML">
+                                <label for="html">Unselected</label><br>
+                                <input type="radio" id="html" name="fav_language" value="HTML">
+                                <label for="html">Selected</label><br>
+                                <input type="radio" id="html" name="fav_language" value="HTML">
+                                <label for="html">Selected</label><br>
+                                <input type="radio" id="html" name="fav_language" value="HTML">
+                                <label for="html">Unselected</label><br>
+                                <input type="radio" id="html" name="fav_language" value="HTML">
+                                <label for="html">Unselected</label><br>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col" >
+                        <div style="text-align:left">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <pre></pre>
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">Selected</label><br>
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">Unselected</label><br>
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">Selected</label><br>
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">Selected</label><br>
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">Unselected</label><br>
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">Unselected</label><br>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <h2> Filter by Target</h2>
+                        <div class="form-group has-search">
+                            <span class="fa fa-search form-control-feedback"></span>
+                            <input type="text" class="form-control" placeholder="Search target...">
+                        </div>
+                        <div style="text-align:left">
+                            <pre></pre>
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">Selected</label><br>
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">Unselected</label><br>
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">Selected</label><br>
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">Selected</label><br>
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">Unselected</label><br>
+                            <input type="radio" id="html" name="fav_language" value="HTML">
+                            <label for="html">Unselected</label><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
