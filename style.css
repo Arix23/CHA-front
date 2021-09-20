@@ -32,6 +32,11 @@
     background-color:lightcoral;
 }
 
+#graph-details{
+    width:800px;
+    margin: 10%;
+}
+
 #oracle-nav-text{
     color:white;
 }
